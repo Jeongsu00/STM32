@@ -3670,3 +3670,55 @@
 2023-09-25 14:40:21,956 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
 2023-09-25 14:42:00,938 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
 2023-09-25 14:42:17,018 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-25 15:25:05,229 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x247,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-25 15:25:06,332 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-25 15:25:10,873 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-25 15:25:20,552 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 917790960 Bytes (1058013184)
+2023-09-25 15:25:22,083 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 955961488 Bytes (1058013184)
+2023-09-25 15:25:22,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RTC
+2023-09-25 15:25:22,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-09-25 15:25:22,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-09-25 15:25:22,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2023-09-25 15:25:22,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2023-09-25 15:25:22,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-09-25 15:25:22,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-09-25 15:25:22,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-09-25 15:25:22,187 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-09-25 15:25:22,270 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\MXTmpFiles\license.tmp_save
+2023-09-25 15:25:22,354 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\MXTmpFiles\license.tmp
+2023-09-25 15:25:22,377 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\gpio.c_save
+2023-09-25 15:25:22,486 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\gpio.c
+2023-09-25 15:25:22,497 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\gpio.h_save
+2023-09-25 15:25:22,564 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\gpio.h
+2023-09-25 15:25:22,655 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\rtc.c_save
+2023-09-25 15:25:22,784 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\rtc.c
+2023-09-25 15:25:22,792 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\rtc.h_save
+2023-09-25 15:25:22,858 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\rtc.h
+2023-09-25 15:25:22,863 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\tim.c_save
+2023-09-25 15:25:22,993 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\tim.c
+2023-09-25 15:25:22,996 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\tim.h_save
+2023-09-25 15:25:23,058 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\tim.h
+2023-09-25 15:25:23,063 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\usart.c_save
+2023-09-25 15:25:23,168 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\usart.c
+2023-09-25 15:25:23,171 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\usart.h_save
+2023-09-25 15:25:23,241 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\usart.h
+2023-09-25 15:25:23,258 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\stm32f4xx_it.c_save
+2023-09-25 15:25:23,423 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\stm32f4xx_it.c
+2023-09-25 15:25:23,439 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\stm32f4xx_it.h_save
+2023-09-25 15:25:23,494 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\stm32f4xx_it.h
+2023-09-25 15:25:23,513 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\stm32f4xx_hal_msp.c_save
+2023-09-25 15:25:23,620 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\stm32f4xx_hal_msp.c
+2023-09-25 15:25:23,623 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\MXTmpFiles\system.tmp_save
+2023-09-25 15:25:23,650 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\MXTmpFiles\system.tmp
+2023-09-25 15:25:23,672 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-09-25 15:25:23,784 [INFO] CodeEngine:335 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\stm32f4xx_hal_conf.h
+2023-09-25 15:25:23,841 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\main.h_save
+2023-09-25 15:25:23,943 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Inc\main.h
+2023-09-25 15:25:23,965 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\main.c_save
+2023-09-25 15:25:24,043 [INFO] CodeEngine:279 - Generated code: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_Input_Capture2\Core\Src\main.c
+2023-09-25 15:25:24,247 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 66mS.
+2023-09-25 15:25:24,250 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-09-25 15:25:24,404 [INFO] ConfigFileManager:1457 - The Die is : DIE433
+2023-09-25 15:25:25,466 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1217mS.
+2023-09-25 15:25:25,466 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-09-25 15:25:25,468 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.

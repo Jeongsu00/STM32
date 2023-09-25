@@ -57,33 +57,33 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-//uint32_t IC_Value1 = 0;
-//uint32_t IC_Value2 = 0;
-//uint32_t Duty_Cycle = 0;
-//uint32_t Frequency = 0;
-//uint16_t i = 1000;
-//
-//void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim){
-//	if(htim -> Channel == HAL_TIM_ACTIVE_CHANNEL_1){
-//		IC_Value1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
-//		if(IC_Value1 != 0){
-//			IC_Value2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_2);
-//			if(IC_Value1 > IC_Value2){
-//				Duty_Cycle = (IC_Value2 * 100 / IC_Value1);
-//				Frequency = HAL_RCC_GetPCLK1Freq() / IC_Value1;
-//			}
-//			else{
-//				Duty_Cycle = (IC_Value2 * 100 / IC_Value2);
-//				Duty_Cycle = 100 - Duty_Cycle;
-//				Frequency = HAL_RCC_GetPCLK1Freq() / IC_Value2;
-//			}
-//		}
-//		else{
-//			Duty_Cycle = 0;
-//			Frequency = 0;
-//		}
-//	}
-//}
+uint32_t IC_Value1 = 0;
+uint32_t IC_Value2 = 0;
+uint32_t Duty_Cycle = 0;
+uint32_t Frequency = 0;
+uint16_t i = 100;
+
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim){
+	if(htim -> Channel == HAL_TIM_ACTIVE_CHANNEL_1){
+		IC_Value1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+		if(IC_Value1 != 0){
+			IC_Value2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_2);
+			if(IC_Value1 > IC_Value2){
+				Duty_Cycle = (IC_Value2 * 100 / IC_Value1);
+				Frequency = HAL_RCC_GetPCLK1Freq() / IC_Value1;
+			}
+			else{
+				Duty_Cycle = (IC_Value2 * 100 / IC_Value2);
+				Duty_Cycle = 100 - Duty_Cycle;
+				Frequency = HAL_RCC_GetPCLK1Freq() / IC_Value2;
+			}
+		}
+		else{
+			Duty_Cycle = 0;
+			Frequency = 0;
+		}
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -119,9 +119,8 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-  uint16_t value = 0;
-//  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_1);
-//  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_2);
+  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_1);
+  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
@@ -129,14 +128,24 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  TIM3 -> CCR1 = value++;
-	  if(value > TIM3 -> ARR) {
-		  value = 0;
-	  }
-	  HAL_Delay(10);
+	  TIM3 -> CCR1 = i;
+	  	  if(i >= 100 && i <= 800){
+	  		  i = i + 50;
+	  	  }
+	  	  else if(i > 800 && i <= 990){
+			  i = i + 5;
+		  }
+	  	  else{
+	  		  i = i + 1;
+	  		HAL_Delay(400);
+	  		  if(i > 999){
+	  			  i = 100;
+	  		  }
+	  	  }
+	  HAL_Delay(100);
     /* USER CODE END WHILE */
 
-	/* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
