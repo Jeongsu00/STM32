@@ -4,5 +4,6 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=w
 configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUCLEO-F401RE Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:F401RE_Input_Capture2 Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:F401RE_Input_Capture2\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:F401RE_Input_Capture2\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUCLEO-F401RE\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUCLEO-F401RE\ Debug/activeLaunchTarget=null\:---
