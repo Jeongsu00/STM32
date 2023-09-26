@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  00018ab9  00000000  00000000  00033c70  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00012f04  00000000  00000000  0004c729  2**0
+ 18 .debug_line   00012f02  00000000  00000000  0004c729  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00094dc9  00000000  00000000  0005f62d  2**0
+ 19 .debug_str    00094dc9  00000000  00000000  0005f62b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00004310  00000000  00000000  000f43f8  2**2
+ 20 .debug_frame  00004310  00000000  00000000  000f43f4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000068  00000000  00000000  000f8708  2**0
+ 21 .debug_line_str 00000068  00000000  00000000  000f8704  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -730,7 +730,7 @@ int main(void)
  8000770:	600a      	str	r2, [r1, #0]
  8000772:	4a0d      	ldr	r2, [pc, #52]	; (80007a8 <main+0x70>)
  8000774:	62d3      	str	r3, [r2, #44]	; 0x2c
-	  if(value>200)value=0;
+	  if(value > 200)value = 0;
  8000776:	4b0b      	ldr	r3, [pc, #44]	; (80007a4 <main+0x6c>)
  8000778:	681b      	ldr	r3, [r3, #0]
  800077a:	2bc8      	cmp	r3, #200	; 0xc8

@@ -136,7 +136,7 @@ int main(void)
   while (1)
   {
 	  TIM3->ARR=value++;
-	  if(value>200)value=0;
+	  if(value > 200)value = 0;
 	  printf("ARR value=%ld, frequency=%ldHz\r\n", value, Frequency);
 	  HAL_Delay(100);
 
