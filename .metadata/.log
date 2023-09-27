@@ -1382,3 +1382,6 @@ java.io.FileNotFoundException: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401R
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-27 12:24:52.165
+!MESSAGE Indexed 'F401RE_FreeRTOS3' (22 sources, 82 headers) in 1.28 sec: 4,716 declarations; 22,526 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0073%)
