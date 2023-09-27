@@ -144,7 +144,7 @@ void StartHightTask(void const * argument)
   {
 	  printf("Entered High Task\r\n");
 	  printf("Leaving High Task\r\n");
-	  osDelay(3000);
+	  osDelay(2000);
   }
   /* USER CODE END StartHightTask */
 }
@@ -164,7 +164,7 @@ void StartMediumTask02(void const * argument)
   {
 	  printf("Entered Medium Task\r\n");
 	  printf("Leaving Medium Task\r\n");
-	  osDelay(3000);
+	  osDelay(2000);
   }
   /* USER CODE END StartMediumTask02 */
 }
@@ -183,8 +183,14 @@ void StartLowTask03(void const * argument)
   for(;;)
   {
 	  printf("Entered Low Task\r\n");
+//	  while (1){
+//		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, SET);
+//		  HAL_Delay(500);
+//		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, RESET);
+//		  HAL_Delay(1000);
+//	  }
 	  printf("Leaving Low Task\r\n");
-	  osDelay(3000);
+	  osDelay(2000);
   }
   /* USER CODE END StartLowTask03 */
 }
