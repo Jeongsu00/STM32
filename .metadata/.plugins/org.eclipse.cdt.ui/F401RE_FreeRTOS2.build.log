@@ -1,4 +1,4 @@
-18:01:02 **** Incremental Build of configuration Debug for project F401RE_FreeRTOS2 ****
+09:22:55 **** Incremental Build of configuration Debug for project F401RE_FreeRTOS2 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
 arm-none-eabi-gcc -o "F401RE_FreeRTOS2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401RE_FreeRTOS2\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="F401RE_FreeRTOS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,11 +7,11 @@ Finished building target: F401RE_FreeRTOS2.elf
 arm-none-eabi-size   F401RE_FreeRTOS2.elf 
 arm-none-eabi-objdump -h -S  F401RE_FreeRTOS2.elf  > "F401RE_FreeRTOS2.list"
    text	   data	    bss	    dec	    hex	filename
-  21068	    116	  18436	  39620	   9ac4	F401RE_FreeRTOS2.elf
+  21144	    116	  18436	  39696	   9b10	F401RE_FreeRTOS2.elf
 Finished building: default.size.stdout
  
 Finished building: F401RE_FreeRTOS2.list
  
 
-18:01:03 Build Finished. 0 errors, 0 warnings. (took 592ms)
+09:22:56 Build Finished. 0 errors, 0 warnings. (took 585ms)
 
