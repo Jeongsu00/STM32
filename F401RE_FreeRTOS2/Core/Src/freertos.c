@@ -172,9 +172,7 @@ void StartMediumTask02(void const * argument)
 	  printf("Entered MediumTask and waiting for Semaphore\r\n");
 	  osSemaphoreWait(myBinarySem01Handle, osWaitForever);
 	  printf("Semaphore acquired by MediumTask\r\n");
-	  while(1){
-		  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
-	  }
+	  while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6));
 	  printf("Leaving MediumTask and Semaphore\r\n");
 	  osSemaphoreRelease(myBinarySem01Handle);                          //FreeRTOS2-1
 	  osDelay(2000);
