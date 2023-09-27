@@ -142,8 +142,13 @@ void StartHightTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  printf("Entered High Task\r\n");
-	  printf("Leaving High Task\r\n");
+/*	  printf("Entered High Task\r\n");
+	  printf("Leaving High Task\r\n");                                             */ //FreeRTOS2
+	  printf("Entered HighTask and waiting for Semaphore\r\n");
+	  osSemaphoreWait(myBinarySem01Handle, osWaitForever);
+	  printf("Semaphore acquired by HighTask\r\n");
+	  printf("Leaving HighTask and Semaphore\r\n");
+	  osSemaphoreRelease(myBinarySem01Handle);                          //FreeRTOS2-1
 	  osDelay(2000);
   }
   /* USER CODE END StartHightTask */
@@ -162,8 +167,16 @@ void StartMediumTask02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  printf("Entered Medium Task\r\n");
-	  printf("Leaving Medium Task\r\n");
+/*	  printf("Entered Medium Task\r\n");
+	  printf("Leaving Medium Task\r\n");                                       */  //FreeRTOS2
+	  printf("Entered MediumTask and waiting for Semaphore\r\n");
+	  osSemaphoreWait(myBinarySem01Handle, osWaitForever);
+	  printf("Semaphore acquired by MediumTask\r\n");
+	  while(1){
+		  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
+	  }
+	  printf("Leaving MediumTask and Semaphore\r\n");
+	  osSemaphoreRelease(myBinarySem01Handle);                          //FreeRTOS2-1
 	  osDelay(2000);
   }
   /* USER CODE END StartMediumTask02 */
@@ -182,14 +195,16 @@ void StartLowTask03(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  printf("Entered Low Task\r\n");
-//	  while (1){
-//		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, SET);
-//		  HAL_Delay(500);
-//		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, RESET);
-//		  HAL_Delay(1000);
-//	  }
-	  printf("Leaving Low Task\r\n");
+/*	  printf("Entered Low Task\r\n");
+	  while (1){
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, SET);
+		  HAL_Delay(500);
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, RESET);
+		  HAL_Delay(1000);
+	  }
+	  printf("Leaving Low Task\r\n");                                            */ //FreeRTOS2
+	  printf("Entered LowTask\r\n");
+	  printf("Leaving LowTask\r\n");                                               //FreeRTOS2-1
 	  osDelay(2000);
   }
   /* USER CODE END StartLowTask03 */
