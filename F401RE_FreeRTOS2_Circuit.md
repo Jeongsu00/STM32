@@ -1,2 +1,0 @@
-STM32
-<img src="https://user-images.githubusercontent.com/115202113/270826234-3708186c-25dc-49d6-bee0-615c0e125f71.jpg" height="300"/>
