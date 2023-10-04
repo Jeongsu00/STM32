@@ -5018,3 +5018,4 @@
 2023-10-04 15:18:15,580 [INFO] ApiDb:452 - User favorites MCUs=[]
 2023-10-04 15:18:15,580 [INFO] ApiDb:448 - Save user favorites file C:\Users\user/.stm32cubeide/favorites.boards.txt: 1 item(s)
 2023-10-04 15:18:15,580 [INFO] ApiDb:452 - User favorites Boards=[NUCLEO-F401RE]
+2023-10-04 15:21:45,772 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
