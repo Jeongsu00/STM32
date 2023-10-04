@@ -1518,3 +1518,18 @@ java.io.FileNotFoundException: C:\Users\user\STM32CubeIDE\workspace_1.13.2\F401R
 
 !ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-10-04 11:15:29.959
 !MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-04 11:59:42.200
+!MESSAGE Indexed 'F401RE_Ultrasonic_Waves' (22 sources, 82 headers) in 1.49 sec: 4,716 declarations; 22,526 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0073%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-10-04 12:04:55.105
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 29 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-10-04 12:04:55.105
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-10-04 12:04:55.105
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 29 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-10-04 12:04:55.105
+!MESSAGE Existing sessions are:
