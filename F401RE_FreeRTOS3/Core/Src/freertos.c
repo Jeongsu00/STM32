@@ -48,6 +48,9 @@
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
+osThreadId myTask02Handle;
+osTimerId myTimer01Handle;
+osTimerId myTimer02Handle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -55,6 +58,9 @@ osThreadId defaultTaskHandle;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
+void StartTask02(void const * argument);
+void Callback01(void const * argument);
+void Callback02(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -108,6 +114,15 @@ void MX_FREERTOS_Init(void) {
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
 
+  /* Create the timer(s) */
+  /* definition and creation of myTimer01 */
+  osTimerDef(myTimer01, Callback01);
+  myTimer01Handle = osTimerCreate(osTimer(myTimer01), osTimerPeriodic, NULL);
+
+  /* definition and creation of myTimer02 */
+  osTimerDef(myTimer02, Callback02);
+  myTimer02Handle = osTimerCreate(osTimer(myTimer02), osTimerOnce, NULL);
+
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
@@ -120,6 +135,10 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of defaultTask */
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+
+  /* definition and creation of myTask02 */
+  osThreadDef(myTask02, StartTask02, osPriorityNormal, 0, 128);
+  myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -137,12 +156,55 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
+	osTimerStart(myTimer01Handle, 1000);
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  printf("Sending from StartDefaultTask\r\n");
+	  osDelay(200);
   }
   /* USER CODE END StartDefaultTask */
+}
+
+/* USER CODE BEGIN Header_StartTask02 */
+/**
+* @brief Function implementing the myTask02 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTask02 */
+void StartTask02(void const * argument)
+{
+  /* USER CODE BEGIN StartTask02 */
+  /* Infinite loop */
+  for(;;)
+  {
+	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_11)){
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 1);
+		  printf("Sending from StartTask02\r\n");
+		  osTimerStart(myTimer02Handle, 2000);
+	  }
+	  osDelay(20);
+  }
+  /* USER CODE END StartTask02 */
+}
+
+/* Callback01 function */
+void Callback01(void const * argument)
+{
+  /* USER CODE BEGIN Callback01 */
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
+	printf("Sending from Callback\r\n");
+  /* USER CODE END Callback01 */
+}
+
+/* Callback02 function */
+void Callback02(void const * argument)
+{
+  /* USER CODE BEGIN Callback02 */
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 0);
+	printf("Sending from Callback02\r\n");
+  /* USER CODE END Callback02 */
 }
 
 /* Private application code --------------------------------------------------*/
