@@ -1,0 +1,7 @@
+../Core/Src/Led.c:10:6:Led_Control1	1
+../Core/Src/Led.c:17:6:Led_Control2	1
+../Core/Src/Led.c:24:6:Led_Control3	1
+../Core/Src/Led.c:29:6:Led_Control4	1
+../Core/Src/Led.c:34:6:Led_Control5	1
+../Core/Src/Led.c:43:6:Led_Toggle_Control1	1
+../Core/Src/Led.c:48:6:Led_Toggle_Control2	1
