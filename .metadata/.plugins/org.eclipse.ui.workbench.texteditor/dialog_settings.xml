@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="uint32_t Adc_Channel1(void){"/>
+		<list key="findhistory">
+			<item value="uint32_t Adc_Channel1(void){"/>
+			<item value=""/>
+		</list>
+	</section>
+</section>

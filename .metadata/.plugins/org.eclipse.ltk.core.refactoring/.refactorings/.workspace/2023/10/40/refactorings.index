@@ -1,1 +1,7 @@
 1696400051373	Delete resource 'joystick_basics'
+1696466425995	Delete resource 'stm32h750_fw'
+1696466648615	Delete resource 'stm32h750'
+1696470407365	Delete resource 'F401RE_joystick_basics/Core/test/Inc/led.h'
+1696472280511	Delete resource 'F401RE_joystick_basics/Core/test'
+1696473307233	Delete resource 'F401RE_joystick_basics/Core/Src/LED.C'
+1696473311412	Delete resource 'F401RE_joystick_basics/Core/Inc/LED.H'

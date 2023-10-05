@@ -1,0 +1,14 @@
+/*
+ * led.c
+ *
+ *  Created on: Oct 5, 2023
+ *      Author: user
+ */
+
+#include "led.h"
+
+void LED(){
+	if(Adc[0] >= 4000){
+		HAL_GPIO_WritePin(GPIOx, GPIO_Pin, 0)
+	}
+}
