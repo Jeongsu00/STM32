@@ -1,0 +1,10 @@
+11:14:40 **** Incremental Build of configuration Debug for project F401RE_PWM ****
+make -j16 all 
+arm-none-eabi-size   F401RE_PWM.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11368	     20	   1708	  13096	   3328	F401RE_PWM.elf
+Finished building: default.size.stdout
+ 
+
+11:14:40 Build Finished. 0 errors, 0 warnings. (took 187ms)
+

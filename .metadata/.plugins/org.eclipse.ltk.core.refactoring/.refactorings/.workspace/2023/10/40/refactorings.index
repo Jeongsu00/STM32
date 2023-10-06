@@ -6,3 +6,5 @@
 1696473307233	Delete resource 'F401RE_joystick_basics/Core/Src/LED.C'
 1696473311412	Delete resource 'F401RE_joystick_basics/Core/Inc/LED.H'
 1696493198950	Delete resource 'F401RE_joystick_basics'
+1696559728823	Delete resource 'Text_LCD'
+1696560236120	Delete resource 'F401RE_TextLCD/Core/Src/i2c-lcd1.c'
