@@ -1,0 +1,22 @@
+18:53:36 **** Incremental Build of configuration Debug for project R401RE_PWM_Servo-motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:107:19: warning: comparison between pointer and integer
+  107 |           if(data == "1"){
+      |                   ^~
+../Core/Src/main.c:107:19: warning: comparison with string literal results in unspecified behavior [-Waddress]
+arm-none-eabi-gcc -o "R401RE_PWM_Servo-motor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\user\STM32CubeIDE\workspace_1.13.2\R401RE_PWM_Servo-motor\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="R401RE_PWM_Servo-motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: R401RE_PWM_Servo-motor.elf
+ 
+arm-none-eabi-size   R401RE_PWM_Servo-motor.elf 
+arm-none-eabi-objdump -h -S  R401RE_PWM_Servo-motor.elf  > "R401RE_PWM_Servo-motor.list"
+   text	   data	    bss	    dec	    hex	filename
+  34820	    476	   2052	  37348	   91e4	R401RE_PWM_Servo-motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: R401RE_PWM_Servo-motor.list
+ 
+
+18:53:37 Build Finished. 0 errors, 2 warnings. (took 1s.50ms)
+

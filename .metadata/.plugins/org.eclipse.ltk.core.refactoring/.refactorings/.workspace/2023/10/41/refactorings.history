@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;R401_PWM_Servo-motor&apos;" deleteContents="false" description="Delete resource &apos;R401_PWM_Servo-motor&apos;" element1="/R401_PWM_Servo-motor" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1696927315919"/>
+</session>
