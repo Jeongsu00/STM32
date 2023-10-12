@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\user\STM32CubeIDE\STM32_Leaning\F401RE_PWM_PCA9685"/>
 			<item value="C:\Users\user\STM32CubeIDE\STM32_Leaning\R401RE_PWM_Servo-motor"/>
 			<item value="C:\Users\user\STM32CubeIDE\STM32_Leaning\F401RE_joystick_basics"/>
 		</list>
