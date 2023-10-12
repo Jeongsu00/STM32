@@ -1,0 +1,39 @@
+!SESSION 2023-10-12 16:49:21.074 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-10-12 16:49:52.142
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-12 16:49:52.155
+!MESSAGE Log4j2 initialized with config file C:\Users\user\STM32CubeIDE\STM32_Leaning\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-12 16:49:54.679
+!MESSAGE Started RMI Server, listening on port 41338
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-12 16:50:33.270
+!MESSAGE Indexed 'F401RE_joystick_basics' (30 sources, 121 headers) in 3.33 sec: 10,131 declarations; 43,631 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.27%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-12 16:54:55.025
+!MESSAGE Indexed 'R401RE_PWM_Servo-motor' (25 sources, 117 headers) in 1.46 sec: 10,760 declarations; 57,244 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.22%)
+!SESSION 2023-10-12 16:56:35.590 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-10-12 16:56:41.170
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-12 16:56:41.172
+!MESSAGE Log4j2 initialized with config file C:\Users\user\STM32CubeIDE\STM32_Leaning\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-12 16:56:44.816
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-12 16:57:00.940
+!MESSAGE Indexed 'F401RE_PWM_PCA9685' (28 sources, 119 headers) in 2.75 sec: 10,965 declarations; 50,870 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.24%)
