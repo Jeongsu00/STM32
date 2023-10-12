@@ -1,0 +1,24 @@
+/*
+ * PCA9685.c
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: user
+ */
+
+#define PCA9685_SERVO_MODE
+
+#ifdef PCA9685_SERVO_MODE
+/* -- ifdef PCA9685_SERVO_MODE은 PCA9685_SERVO_MODE가 define 되어있을 때
+ * 	아래 코드 블록을 컴파일 한다. 정의되어 있지 않으면 이 코드 블록을 컨너뛴다.*/
+
+// Servo min and max values for TIANKONGRC MG90S Micro Servos
+
+#define SERVO_MIN				110
+#define SERVO_MAX			500
+#define MIN_ANGLE				0.0
+#define MAX_ANGLE		180.0
+#endif
+
+//	Adjustable address 0x80 - 0xFE
+
+#define PCA9685_ADDRESS 0x80
