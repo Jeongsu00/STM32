@@ -1,0 +1,17 @@
+/*
+ * DotMartrix.h
+ *
+ *  Created on: Oct 16, 2023
+ *      Author: user
+ */
+
+#ifndef INC_DOTMARTRIX_H_
+#define INC_DOTMARTRIX_H_
+
+#include "main.h"
+
+#define Set_PA_1            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET)
+
+void Dotmartrix_ALLON();
+
+#endif /* INC_DOTMARTRIX_H_ */

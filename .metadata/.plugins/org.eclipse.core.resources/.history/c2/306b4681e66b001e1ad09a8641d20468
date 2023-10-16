@@ -1,0 +1,18 @@
+/*
+ * DotMartrix.h
+ *
+ *  Created on: Oct 16, 2023
+ *      Author: user
+ */
+
+#ifndef INC_DOTMARTRIX_H_
+#define INC_DOTMARTRIX_H_
+
+#include "main.h"
+#include "gpio.h"
+
+void Dotmartrix_ALLON();
+
+#define Rows[1]			HAL_GPIO_Write
+
+#endif /* INC_DOTMARTRIX_H_ */

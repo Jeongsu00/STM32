@@ -1,0 +1,54 @@
+/*
+ * DotMartrix.c
+ *
+ *  Created on: Oct 16, 2023
+ *      Author: user
+ */
+
+#include "DotMartrix.h"
+
+	  // PC8 = 1,  PC6 = 2,    PC5 = 3,    PA12 = 4,    PA11 = 5,  PB12 = 6,  PB2 = 7,    PB1 = 8
+	  // PC9 = 9,  PB8 = 10,  PB9 = 11,  PA6 = 12,    PA7 = 13,   PB6 = 14,  PC7 = 15,  PA9 = 16
+
+
+//void Dotmartrix_ALLON(){
+//	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6 | GPIO_PIN_11 , GPIO_PIN_SET);
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6 | GPIO_PIN_2 | GPIO_PIN_1, GPIO_PIN_SET);
+//	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9 | GPIO_PIN_8 | GPIO_PIN_6 , GPIO_PIN_SET);
+//	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7 | GPIO_PIN_12 | GPIO_PIN_9 , GPIO_PIN_RESET);
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8 | GPIO_PIN_12 | GPIO_PIN_9 , GPIO_PIN_RESET);
+//	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5 | GPIO_PIN_7, GPIO_PIN_RESET);
+//}
+
+const uint8_t Pattern_E[8] = {
+    0b11111111, // 0xFF
+    0b11100000, // 0xE0
+    0b11100000, // 0xE0
+    0b11111111, // 0xFF
+    0b11111111, // 0xFF
+    0b11100000, // 0xE0
+    0b11100000, // 0xE0
+    0b11111111  // 0xFF
+};
+
+void DisplayCharacterE(uint8_t pattern[8], uint32_t delay_ms) {
+    for (int row = 0; row < 8; row++) {
+        // 각 행을 순서대로 활성화하고 패턴에 따라 열을 활성화
+        for (int col = 0; col < 8; col++) {
+            if (pattern[row] & (1 << col)) {
+                // 도트를 활성화
+                HAL_GPIO_WritePin(GPIO_COL_1, GPIO_PIN_SET); // 해당 열 활성화
+                HAL_GPIO_WritePin(GPIO_ROW_1 + row, GPIO_PIN_SET); // 해당 행 활성화
+            } else {
+                // 도트를 비활성화
+                HAL_GPIO_WritePin(GPIO_COL_1, GPIO_PIN_RESET);
+                HAL_GPIO_WritePin(GPIO_ROW_1 + row, GPIO_PIN_RESET);
+            }
+
+            HAL_Delay(1); // 각 도트를 활성화한 후 잠시 대기
+        }
+        // 현재 행을 비활성화
+        HAL_GPIO_WritePin(GPIO_ROW_1 + row, GPIO_PIN_RESET);
+        HAL_Delay(delay_ms); // 다음 행으로 이동하기 전에 대기
+    }
+}

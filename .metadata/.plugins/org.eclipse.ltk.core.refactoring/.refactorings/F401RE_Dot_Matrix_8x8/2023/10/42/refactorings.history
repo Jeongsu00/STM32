@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;F401RE_Dot_Matrix_8x8/Core/Inc/DotMartrix&apos; to &apos;DotMartrix.h&apos;" description="Rename resource &apos;DotMartrix&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/DotMartrix" name="DotMartrix.h" stamp="1697431696813" updateReferences="true"/>
+</session>

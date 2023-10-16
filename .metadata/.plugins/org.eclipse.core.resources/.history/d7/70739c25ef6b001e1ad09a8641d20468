@@ -1,0 +1,68 @@
+/*
+ * DotMartrix.h
+ *
+ *  Created on: Oct 16, 2023
+ *      Author: user
+ */
+
+#ifndef INC_DOTMARTRIX_H_
+#define INC_DOTMARTRIX_H_
+
+#include "main.h"
+#include "gpio.h"
+
+// PC8 = 1,  PC6 = 2,    PC5 = 3,    PA12 = 4,    PA11 = 5,  PB12 = 6,  PB2 = 7,    PB1 = 8
+// PC9 = 9,  PB8 = 10,  PB9 = 11,  PA6 = 12,    PA7 = 13,   PB6 = 14,  PC7 = 15,  PA9 = 16
+
+
+#define Row_1_Set			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
+#define Row_2_Set			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+#define Row_3_Set			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+#define Row_4_Set			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
+#define Row_5_Set			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
+#define Row_6_Set			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+#define Row_7_Set			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
+#define Row_8_Set			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, GPIO_PIN_SET);
+
+#define Row_1_Reset			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_RESET);
+#define Row_2_Reset			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+#define Row_3_Reset			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+#define Row_4_Reset			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+#define Row_5_Reset			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_RESET);
+#define Row_6_Reset			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+#define Row_7_Reset			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_RESET);
+#define Row_8_Reset			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, GPIO_PIN_RESET);
+
+#define Col_1_Set			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
+#define Col_2_Set			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
+#define Col_3_Set			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
+#define Col_4_Set			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
+#define Col_5_Set			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+#define Col_6_Set			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_SET);
+#define Col_7_Set			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+#define Col_8_Set			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);
+
+#define Col_1_Reset			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
+#define Col_2_Reset			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);
+#define Col_3_Reset			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
+#define Col_4_Reset			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_RESET);
+#define Col_5_Reset			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+#define Col_6_Reset			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
+#define Col_7_Reset			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
+#define Col_8_Reset			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET);
+
+typedef void (*FunctionPointer)();
+
+FunctionPointer Rows_Setters[] = {
+    Rows_1_Set, Rows_2_Set, Rows_3_Set, Rows_4_Set, Rows_5_Set, Rows_6_Set, Rows_7_Set, Rows_8_Set
+};
+
+FunctionPointer Colrs_Setters[] = {
+    Colrs_1_Set, Colrs_2_Set, Colrs_3_Set, Colrs_4_Set, Colrs_5_Set, Colrs_6_Set, Colrs_7_Set, Colrs_8_Set
+};
+
+void Dotmartrix_ALLON();
+void Dotmartrix_Setup();
+void Dotmartrix_E();
+
+#endif /* INC_DOTMARTRIX_H_ */
