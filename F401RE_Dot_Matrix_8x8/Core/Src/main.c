@@ -88,18 +88,18 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  GPIOA -> MODER |= (1 << 14);
+//  GPIOA -> MODER |= (1 << 14);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  Dotmartrix_ALLON();								// 도트 매트릭스 작동 코드
-
-//	  GPIOA -> ODR |= GPIO_PIN_10;			// LED GPIOA에 10번 포트 점등
+	  Dotmartrix_Setup();
+	  Row_Control();
+//	  GPIOA -> ODR |= P10;					// LED GPIOA에 10번 포트 점등
 //	  HAL_Delay(500);
-//	  GPIOA -> ODR &= ~ GPIO_PIN_10;		// LED GPIOA에 10번 포트 소등
+//	  GPIOA -> ODR &= ~ P10;			// LED GPIOA에 10번 포트 소등
 //	  HAL_Delay(500);
 
 //	  GPIOA -> ODR ^= GPIO_PIN_7;				// LED GPIOA에 10번 포트 토글
