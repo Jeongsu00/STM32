@@ -1,0 +1,67 @@
+/*
+ * DotMartrix.c
+ *
+ *  Created on: Oct 16, 2023
+ *      Author: user
+ */
+
+#include "DotMartrix.h"
+
+	// PC8 = 1,  PC6 = 2,    PC5 = 3,    PA12 = 4,    PA11 = 5,  PB12 = 6,  PB2 = 7,    PB1 = 8
+	// PC9 = 9,  PB8 = 10,  PB9 = 11,  PA6 = 12,    PA7 = 13,   PB6 = 14,  PC7 = 15,  PA9 = 16
+
+	// 9, 14, 8, 12, 1, 7, 2, 5 = PC9, PB6, PB1, PA6, PC8, PB2, PC6, PA11
+	// 13, 3, 4, 10, 6, 11, 15, 16 = PA7, PC5, PA12, PB8, PB12, PB9, PC7, PA9
+
+int Dotmartrix_Control[8][8] = {
+	{1, 1, 1, 1, 1, 1, 1, 1},
+	{1, 1, 0, 0, 0, 0, 0, 0},
+	{1, 1, 0, 0, 0, 0, 0, 0},
+	{1, 1, 1, 1, 1, 1, 1, 1},
+	{1, 1, 1, 1, 1, 1, 1, 1},
+	{1, 1, 0, 0, 0, 0, 0, 0},
+	{1, 1, 0, 0, 0, 0, 0, 0},
+	{1, 1, 1, 1, 1, 1, 1, 1}
+
+};
+
+void Dotmartrix_ALLON(){
+	  HAL_GPIO_WritePin(GPIOA, P6 | P11 , GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(GPIOB, P6 | P2 | P1, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(GPIOC, P9 | P8 | P6 , GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(GPIOA, P7 | P12 | P9 , GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin(GPIOB, P8 | P12 | P9 , GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin(GPIOC, P5 | P7, GPIO_PIN_RESET);
+}
+
+void PAS7() { GPIOA -> ODR |= P7; }
+void PCS5() { GPIOC -> ODR |= P5; }
+void PAS12() { GPIOA -> ODR |= P12; }
+void PBS8() { GPIOB -> ODR |= P8; }
+void PBS12() { GPIOB -> ODR |= P12; }
+void PBS9() { GPIOB -> ODR |= P9; }
+void PCS7() { GPIOC -> ODR |= P7; }
+void PAS9() { GPIOA -> ODR |= P9; }
+
+void PARS7() { GPIOA -> ODR &= ~P7; }
+void PCRS5() { GPIOC -> ODR &= ~P5; }
+void PARS12() { GPIOA -> ODR &= ~P12; }
+void PBRS8() { GPIOB -> ODR &= ~P8; }
+void PBRS12() { GPIOB -> ODR &= ~P12; }
+void PBRS9() { GPIOB -> ODR &= ~P9; }
+void PCRS7() { GPIOC -> ODR &= ~P7; }
+void PARS9() { GPIOA -> ODR &= ~P9; }
+
+char Array[] = {"PARS7", "PCRS5", "PARS12", "PBRS8", "PBRS12", "PBRS9", "PCRS7", "PAS9"};
+
+//PC9, PB6, PB1, PA6, PC8, PB2, PC6, PA11
+//PA7, PC5, PA12, PB8, PB12, PB9, PC7, PA9
+
+void Control(void){
+	PCS9;
+	for (int y = 0; y < 8; y++){
+		if(Dotmartrix_Control[0][y] == 1){
+			Array[y];
+		}
+	}
+}
