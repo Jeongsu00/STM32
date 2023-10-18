@@ -1,0 +1,3 @@
+../Core/Src/Step-motor.c:10:6:delay	16	static
+../Core/Src/Step-motor.c:15:6:stepper_set_rpm	16	static
+../Core/Src/Step-motor.c:20:6:stepper_half_driver	16	static
