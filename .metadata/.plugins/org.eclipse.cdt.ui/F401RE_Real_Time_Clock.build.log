@@ -1,0 +1,50 @@
+12:00:03 **** Incremental Build of configuration Debug for project F401RE_Real_Time_Clock ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Get_Time':
+../Core/Src/main.c:95:9: error: 'time_seconds' undeclared (first use in this function)
+   95 |         time_seconds = bcdToDec(get_time[0]);
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:95:9: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:96:9: error: 'time_minutes' undeclared (first use in this function)
+   96 |         time_minutes = bcdToDec(get_time[1]);
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:97:9: error: 'time_hour' undeclared (first use in this function)
+   97 |         time_hour = bcdToDec(get_time[2]);
+      |         ^~~~~~~~~
+../Core/Src/main.c:98:9: error: 'time_dayofweek' undeclared (first use in this function)
+   98 |         time_dayofweek = bcdToDec(get_time[3]);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/main.c:99:9: error: 'time_dayofmonth' undeclared (first use in this function)
+   99 |         time_dayofmonth = bcdToDec(get_time[4]);
+      |         ^~~~~~~~~~~~~~~
+../Core/Src/main.c:100:9: error: 'time_month' undeclared (first use in this function)
+  100 |         time_month = bcdToDec(get_time[5]);
+      |         ^~~~~~~~~~
+../Core/Src/main.c:101:9: error: 'time_year' undeclared (first use in this function)
+  101 |         time_year = bcdToDec(get_time[6]);
+      |         ^~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:162:37: error: 'time_hour' undeclared (first use in this function)
+  162 |           printf ("%02d:%02d:%02d", time_hour, time_minutes, time_seconds);
+      |                                     ^~~~~~~~~
+../Core/Src/main.c:162:48: error: 'time_minutes' undeclared (first use in this function)
+  162 |           printf ("%02d:%02d:%02d", time_hour, time_minutes, time_seconds);
+      |                                                ^~~~~~~~~~~~
+../Core/Src/main.c:162:62: error: 'time_seconds' undeclared (first use in this function)
+  162 |           printf ("%02d:%02d:%02d", time_hour, time_minutes, time_seconds);
+      |                                                              ^~~~~~~~~~~~
+../Core/Src/main.c:163:39: error: 'time_dayofmonth' undeclared (first use in this function)
+  163 |           printf ("%02d-%02d-20%02d", time_dayofmonth, time_month, time_year);
+      |                                       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:163:56: error: 'time_month' undeclared (first use in this function)
+  163 |           printf ("%02d-%02d-20%02d", time_dayofmonth, time_month, time_year);
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:163:68: error: 'time_year' undeclared (first use in this function)
+  163 |           printf ("%02d-%02d-20%02d", time_dayofmonth, time_month, time_year);
+      |                                                                    ^~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+12:00:03 Build Failed. 14 errors, 0 warnings. (took 294ms)
+

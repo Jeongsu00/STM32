@@ -1,2 +1,6 @@
 1697431711682	Delete resource 'F401RE_Dot_Matrix_8x8/Core/Inc/DotMartrix.h'
 1697621021743	Delete resource 'F401RE_Step-Motor/Core/Src/Step-motor'
+1697674186478	Delete resource 'F401RE_Real_Time_Clock'
+1697685532829	Rename resource 'F401RE_Real_Time_Clock'
+1697698843920	Delete resource 'F401RE_Bluetooth_Module'
+1697785186916	Delete resource 'F401RE_NTC_Thermistor'
