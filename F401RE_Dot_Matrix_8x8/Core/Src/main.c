@@ -95,7 +95,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  Dotmartrix_Setup();
+	  Dotmatrix_Setup();
 	  Row_Control();
 //	  GPIOA -> ODR |= P10;					// LED GPIOA에 10번 포트 점등
 //	  HAL_Delay(500);

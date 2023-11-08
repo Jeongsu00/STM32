@@ -41,11 +41,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  18 .debug_line   0000f169  00000000  00000000  00046c21  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    0008cf7e  00000000  00000000  00055d8a  2**0
+ 19 .debug_str    0008cf79  00000000  00000000  00055d8a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00003144  00000000  00000000  000e2d08  2**2
+ 20 .debug_frame  00003144  00000000  00000000  000e2d04  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000006d  00000000  00000000  000e5e4c  2**0
+ 21 .debug_line_str 0000006d  00000000  00000000  000e5e48  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -351,44 +351,44 @@ Disassembly of section .text:
  80004cc:	4770      	bx	lr
  80004ce:	bf00      	nop
 
-080004d0 <Dotmartrix_Setup>:
+080004d0 <Dotmatrix_Setup>:
 	  HAL_GPIO_WritePin(GPIOA, P7 | P12 | P9 , GPIO_PIN_RESET);
 	  HAL_GPIO_WritePin(GPIOB, P8 | P12 | P9 , GPIO_PIN_RESET);
 	  HAL_GPIO_WritePin(GPIOC, P5 | P7, GPIO_PIN_RESET);
 }
 
-void Dotmartrix_Setup(){
+void Dotmatrix_Setup(){
  80004d0:	b580      	push	{r7, lr}
  80004d2:	af00      	add	r7, sp, #0
 	  HAL_GPIO_WritePin(GPIOA, P6 | P11 , GPIO_PIN_RESET);
  80004d4:	2200      	movs	r2, #0
  80004d6:	f44f 6104 	mov.w	r1, #2112	; 0x840
- 80004da:	4810      	ldr	r0, [pc, #64]	; (800051c <Dotmartrix_Setup+0x4c>)
+ 80004da:	4810      	ldr	r0, [pc, #64]	; (800051c <Dotmatrix_Setup+0x4c>)
  80004dc:	f000 ff42 	bl	8001364 <HAL_GPIO_WritePin>
 	  HAL_GPIO_WritePin(GPIOB, P6 | P2 | P1, GPIO_PIN_RESET);
  80004e0:	2200      	movs	r2, #0
  80004e2:	2146      	movs	r1, #70	; 0x46
- 80004e4:	480e      	ldr	r0, [pc, #56]	; (8000520 <Dotmartrix_Setup+0x50>)
+ 80004e4:	480e      	ldr	r0, [pc, #56]	; (8000520 <Dotmatrix_Setup+0x50>)
  80004e6:	f000 ff3d 	bl	8001364 <HAL_GPIO_WritePin>
 	  HAL_GPIO_WritePin(GPIOC, P9 | P8 | P6 , GPIO_PIN_RESET);
  80004ea:	2200      	movs	r2, #0
  80004ec:	f44f 7150 	mov.w	r1, #832	; 0x340
- 80004f0:	480c      	ldr	r0, [pc, #48]	; (8000524 <Dotmartrix_Setup+0x54>)
+ 80004f0:	480c      	ldr	r0, [pc, #48]	; (8000524 <Dotmatrix_Setup+0x54>)
  80004f2:	f000 ff37 	bl	8001364 <HAL_GPIO_WritePin>
 	  HAL_GPIO_WritePin(GPIOA, P7 | P12 | P9 , GPIO_PIN_RESET);
  80004f6:	2200      	movs	r2, #0
  80004f8:	f44f 5194 	mov.w	r1, #4736	; 0x1280
- 80004fc:	4807      	ldr	r0, [pc, #28]	; (800051c <Dotmartrix_Setup+0x4c>)
+ 80004fc:	4807      	ldr	r0, [pc, #28]	; (800051c <Dotmatrix_Setup+0x4c>)
  80004fe:	f000 ff31 	bl	8001364 <HAL_GPIO_WritePin>
 	  HAL_GPIO_WritePin(GPIOB, P8 | P12 | P9 , GPIO_PIN_RESET);
  8000502:	2200      	movs	r2, #0
  8000504:	f44f 5198 	mov.w	r1, #4864	; 0x1300
- 8000508:	4805      	ldr	r0, [pc, #20]	; (8000520 <Dotmartrix_Setup+0x50>)
+ 8000508:	4805      	ldr	r0, [pc, #20]	; (8000520 <Dotmatrix_Setup+0x50>)
  800050a:	f000 ff2b 	bl	8001364 <HAL_GPIO_WritePin>
 	  HAL_GPIO_WritePin(GPIOC, P5 | P7, GPIO_PIN_RESET);
  800050e:	2200      	movs	r2, #0
  8000510:	21a0      	movs	r1, #160	; 0xa0
- 8000512:	4804      	ldr	r0, [pc, #16]	; (8000524 <Dotmartrix_Setup+0x54>)
+ 8000512:	4804      	ldr	r0, [pc, #16]	; (8000524 <Dotmatrix_Setup+0x54>)
  8000514:	f000 ff26 	bl	8001364 <HAL_GPIO_WritePin>
 }
  8000518:	bf00      	nop
@@ -681,7 +681,7 @@ void Col_Control(int Control, int Row){
  8000722:	2300      	movs	r3, #0
  8000724:	617b      	str	r3, [r7, #20]
  8000726:	e00e      	b.n	8000746 <Col_Control+0x3e>
-			if(Dotmartrix_Control_Y[Row][Col] == 0) {
+			if(Dotmatrix_Control_Y[Row][Col] == 0) {
  8000728:	492b      	ldr	r1, [pc, #172]	; (80007d8 <Col_Control+0xd0>)
  800072a:	683b      	ldr	r3, [r7, #0]
  800072c:	00da      	lsls	r2, r3, #3
@@ -717,7 +717,7 @@ void Col_Control(int Control, int Row){
  8000762:	2300      	movs	r3, #0
  8000764:	613b      	str	r3, [r7, #16]
  8000766:	e00e      	b.n	8000786 <Col_Control+0x7e>
-			if(Dotmartrix_Control_E[Row][Col] == 0) {
+			if(Dotmatrix_Control_E[Row][Col] == 0) {
  8000768:	491c      	ldr	r1, [pc, #112]	; (80007dc <Col_Control+0xd4>)
  800076a:	683b      	ldr	r3, [r7, #0]
  800076c:	00da      	lsls	r2, r3, #3
@@ -753,7 +753,7 @@ void Col_Control(int Control, int Row){
  80007a2:	2300      	movs	r3, #0
  80007a4:	60fb      	str	r3, [r7, #12]
  80007a6:	e00e      	b.n	80007c6 <Col_Control+0xbe>
-			if(Dotmartrix_Control_S[Row][Col] == 0) {
+			if(Dotmatrix_Control_S[Row][Col] == 0) {
  80007a8:	490d      	ldr	r1, [pc, #52]	; (80007e0 <Col_Control+0xd8>)
  80007aa:	683b      	ldr	r3, [r7, #0]
  80007ac:	00da      	lsls	r2, r3, #3
@@ -793,7 +793,7 @@ void Col_Control_1(int Col){
  80007e6:	b083      	sub	sp, #12
  80007e8:	af00      	add	r7, sp, #0
  80007ea:	6078      	str	r0, [r7, #4]
-	if(Col == 0) PAS7;					// Dotmartrix_Control[x][0]
+	if(Col == 0) PAS7;					// Dotmatrix_Control[x][0]
  80007ec:	687b      	ldr	r3, [r7, #4]
  80007ee:	2b00      	cmp	r3, #0
  80007f0:	d106      	bne.n	8000800 <Col_Control_1+0x1c>
@@ -802,14 +802,14 @@ void Col_Control_1(int Col){
  80007f6:	4a28      	ldr	r2, [pc, #160]	; (8000898 <Col_Control_1+0xb4>)
  80007f8:	f043 0380 	orr.w	r3, r3, #128	; 0x80
  80007fc:	6153      	str	r3, [r2, #20]
-	else if(Col == 3) PBS8;			// Dotmartrix_Control[x][3]
-	else if(Col == 4) PBS12;			// Dotmartrix_Control[x][4]
-	else if(Col == 5) PBS9;			// Dotmartrix_Control[x][5]
-	else if(Col == 6) PCS7;			// Dotmartrix_Control[x][6]
-	else if(Col == 7) PAS9;			// Dotmartrix_Control[x][7]
+	else if(Col == 3) PBS8;			// Dotmatrix_Control[x][3]
+	else if(Col == 4) PBS12;			// Dotmatrix_Control[x][4]
+	else if(Col == 5) PBS9;			// Dotmatrix_Control[x][5]
+	else if(Col == 6) PCS7;			// Dotmatrix_Control[x][6]
+	else if(Col == 7) PAS9;			// Dotmatrix_Control[x][7]
 }
  80007fe:	e044      	b.n	800088a <Col_Control_1+0xa6>
-	else if(Col == 1) PCS5;			// Dotmartrix_Control[x][1]
+	else if(Col == 1) PCS5;			// Dotmatrix_Control[x][1]
  8000800:	687b      	ldr	r3, [r7, #4]
  8000802:	2b01      	cmp	r3, #1
  8000804:	d106      	bne.n	8000814 <Col_Control_1+0x30>
@@ -820,7 +820,7 @@ void Col_Control_1(int Col){
  8000810:	6153      	str	r3, [r2, #20]
 }
  8000812:	e03a      	b.n	800088a <Col_Control_1+0xa6>
-	else if(Col == 2) PAS12;			// Dotmartrix_Control[x][2]
+	else if(Col == 2) PAS12;			// Dotmatrix_Control[x][2]
  8000814:	687b      	ldr	r3, [r7, #4]
  8000816:	2b02      	cmp	r3, #2
  8000818:	d106      	bne.n	8000828 <Col_Control_1+0x44>
@@ -831,7 +831,7 @@ void Col_Control_1(int Col){
  8000824:	6153      	str	r3, [r2, #20]
 }
  8000826:	e030      	b.n	800088a <Col_Control_1+0xa6>
-	else if(Col == 3) PBS8;			// Dotmartrix_Control[x][3]
+	else if(Col == 3) PBS8;			// Dotmatrix_Control[x][3]
  8000828:	687b      	ldr	r3, [r7, #4]
  800082a:	2b03      	cmp	r3, #3
  800082c:	d106      	bne.n	800083c <Col_Control_1+0x58>
@@ -842,7 +842,7 @@ void Col_Control_1(int Col){
  8000838:	6153      	str	r3, [r2, #20]
 }
  800083a:	e026      	b.n	800088a <Col_Control_1+0xa6>
-	else if(Col == 4) PBS12;			// Dotmartrix_Control[x][4]
+	else if(Col == 4) PBS12;			// Dotmatrix_Control[x][4]
  800083c:	687b      	ldr	r3, [r7, #4]
  800083e:	2b04      	cmp	r3, #4
  8000840:	d106      	bne.n	8000850 <Col_Control_1+0x6c>
@@ -853,7 +853,7 @@ void Col_Control_1(int Col){
  800084c:	6153      	str	r3, [r2, #20]
 }
  800084e:	e01c      	b.n	800088a <Col_Control_1+0xa6>
-	else if(Col == 5) PBS9;			// Dotmartrix_Control[x][5]
+	else if(Col == 5) PBS9;			// Dotmatrix_Control[x][5]
  8000850:	687b      	ldr	r3, [r7, #4]
  8000852:	2b05      	cmp	r3, #5
  8000854:	d106      	bne.n	8000864 <Col_Control_1+0x80>
@@ -864,7 +864,7 @@ void Col_Control_1(int Col){
  8000860:	6153      	str	r3, [r2, #20]
 }
  8000862:	e012      	b.n	800088a <Col_Control_1+0xa6>
-	else if(Col == 6) PCS7;			// Dotmartrix_Control[x][6]
+	else if(Col == 6) PCS7;			// Dotmatrix_Control[x][6]
  8000864:	687b      	ldr	r3, [r7, #4]
  8000866:	2b06      	cmp	r3, #6
  8000868:	d106      	bne.n	8000878 <Col_Control_1+0x94>
@@ -875,7 +875,7 @@ void Col_Control_1(int Col){
  8000874:	6153      	str	r3, [r2, #20]
 }
  8000876:	e008      	b.n	800088a <Col_Control_1+0xa6>
-	else if(Col == 7) PAS9;			// Dotmartrix_Control[x][7]
+	else if(Col == 7) PAS9;			// Dotmatrix_Control[x][7]
  8000878:	687b      	ldr	r3, [r7, #4]
  800087a:	2b07      	cmp	r3, #7
  800087c:	d105      	bne.n	800088a <Col_Control_1+0xa6>
@@ -1114,16 +1114,16 @@ int main(void)
  80009e8:	f7ff ff5c 	bl	80008a4 <MX_GPIO_Init>
   MX_USART2_UART_Init();
  80009ec:	f000 f976 	bl	8000cdc <MX_USART2_UART_Init>
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-//	  Dotmartrix_ALLON();								// 도트 매트릭스 작동 코드
-	  Dotmartrix_Setup();
- 80009f0:	f7ff fd6e 	bl	80004d0 <Dotmartrix_Setup>
+	  Dotmatrix_Setup();
+ 80009f0:	f7ff fd6e 	bl	80004d0 <Dotmatrix_Setup>
 	  Row_Control();
  80009f4:	f7ff fdb4 	bl	8000560 <Row_Control>
-	  Dotmartrix_Setup();
+	  Dotmatrix_Setup();
  80009f8:	e7fa      	b.n	80009f0 <main+0x14>
 	...
 

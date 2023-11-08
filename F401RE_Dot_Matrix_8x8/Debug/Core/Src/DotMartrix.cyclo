@@ -1,5 +1,5 @@
-../Core/Src/DotMartrix.c:52:6:Dotmartrix_ALLON	1
-../Core/Src/DotMartrix.c:61:6:Dotmartrix_Setup	1
+../Core/Src/DotMartrix.c:52:6:Dotmatrix_ALLON	1
+../Core/Src/DotMartrix.c:61:6:Dotmatrix_Setup	1
 ../Core/Src/DotMartrix.c:70:6:Col_Setup	1
 ../Core/Src/DotMartrix.c:79:6:Row_Control	11
 ../Core/Src/DotMartrix.c:134:6:Col_Control	13
