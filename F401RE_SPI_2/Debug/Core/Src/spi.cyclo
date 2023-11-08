@@ -1,0 +1,5 @@
+../Core/Src/spi.c:32:6:MX_SPI2_Init	2
+../Core/Src/spi.c:64:6:HAL_SPI_MspInit	2
+../Core/Src/spi.c:107:6:HAL_SPI_MspDeInit	2
+../Core/Src/spi.c:137:6:SPI_Transmit	7
+../Core/Src/spi.c:157:6:SPI_Receive	3
