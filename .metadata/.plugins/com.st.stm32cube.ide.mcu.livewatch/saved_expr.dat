@@ -1,5 +1,1 @@
-R2
-(float)adc1_value[0]
-logR2
-1023.0 / (float)adc1_value[0]
-Thenrmistor_Result
+temp

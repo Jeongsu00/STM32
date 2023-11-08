@@ -1,0 +1,10 @@
+16:49:48 **** Incremental Build of configuration Debug for project F401RE_SPI_2 ****
+make -j16 all 
+arm-none-eabi-size   F401RE_SPI_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15964	     24	   1808	  17796	   4584	F401RE_SPI_2.elf
+Finished building: default.size.stdout
+ 
+
+16:49:48 Build Finished. 0 errors, 0 warnings. (took 133ms)
+
