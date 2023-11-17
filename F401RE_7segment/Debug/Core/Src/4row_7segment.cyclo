@@ -1,0 +1,4 @@
+../Core/Src/4row_7segment.c:10:6:Segment_init	1
+../Core/Src/4row_7segment.c:45:6:Segment_SET	1
+../Core/Src/4row_7segment.c:57:6:Segment_ROW	11
+../Core/Src/4row_7segment.c:117:6:Segment_control	21
