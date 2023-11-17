@@ -36,14 +36,16 @@ void Led_Set(){
 //	  GPIOA -> MODER |= (1 << 10);
 
 // 예제 4
-	  GPIOA -> MODER &= (~0x11);
-	  GPIOA -> MODER |= (1);
-	  GPIOA -> MODER &= (~(0x11 << 2));
-	  GPIOA -> MODER |= (1 << 2);
-	  GPIOA -> MODER &= (~(0x11 << 8));
-	  GPIOA -> MODER |= (1 << 8);
-	  GPIOA -> MODER &= (~(0x11 << 10));
-	  GPIOA -> MODER |= (1 << 10);
+//	  GPIOA -> MODER &= (~0x11);
+//	  GPIOA -> MODER |= (1);
+//	  GPIOA -> MODER &= (~(0x11 << 2));
+//	  GPIOA -> MODER |= (1 << 2);
+//	  GPIOA -> MODER &= (~(0x11 << 8));
+//	  GPIOA -> MODER |= (1 << 8);
+//	  GPIOA -> MODER &= (~(0x11 << 10));
+//	  GPIOA -> MODER |= (1 << 10);
+
+//예제5
 }
 
 
@@ -58,7 +60,7 @@ void Led_Control(){
 // 예제 2
 //	  GPIOA -> ODR = 0x01 << 1;		// GPIOA 1번 Port 레지스터에 1을 입력 GPIOA -> ODR = 0x02도 가능
 //	  HAL_Delay(1000);
-//	  GPIOA -> ODR = 0x00;				// GPIOA 1번 Port 레지스터에 1을 입력
+//	  GPIOA -> ODR = 0x00;				// GPIOA 1번 Port 레지스터에 0을 입력
 //	  HAL_Delay(1000);
 
 // 예제 3
@@ -83,16 +85,18 @@ void Led_Control(){
 //	  GPIOA -> BSRR |= (1 << 5) << 16;		// GPIOA 5번 Port Reset (BSRR의 17~32bit는 Reset 여부)
 //	  HAL_Delay(1000);
 
-	  GPIOA -> BSRR |= (1 << 5) << 16;
-	  GPIOA -> BSRR |= 1 << 0;
-	  HAL_Delay(250);
-	  GPIOA -> BSRR |=  1 << 16;
-	  GPIOA -> BSRR |= 1 << 1;
-	  HAL_Delay(250);
-	  GPIOA -> BSRR |= (1 << 1) << 16;
-	  GPIOA -> BSRR |= 1 << 4;
-	  HAL_Delay(250);
-	  GPIOA -> BSRR |= (1 << 4) << 16;
-	  GPIOA -> BSRR |= 1 << 5;
-	  HAL_Delay(250);
+//	  GPIOA -> BSRR |= (1 << 5) << 16;
+//	  GPIOA -> BSRR |= 1 << 0;
+//	  HAL_Delay(250);
+//	  GPIOA -> BSRR |=  1 << 16;
+//	  GPIOA -> BSRR |= 1 << 1;
+//	  HAL_Delay(250);
+//	  GPIOA -> BSRR |= (1 << 1) << 16;
+//	  GPIOA -> BSRR |= 1 << 4;
+//	  HAL_Delay(250);
+//	  GPIOA -> BSRR |= (1 << 4) << 16;
+//	  GPIOA -> BSRR |= 1 << 5;
+//	  HAL_Delay(250);
+
+//예제5
 }
