@@ -1,0 +1,16 @@
+16:43:45 **** Incremental Build of configuration Debug for project F401RE_SPI_4_Sentence ****
+make -j16 all 
+arm-none-eabi-gcc -o "F401RE_SPI_4_Sentence.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\user\STM32CubeIDE\STM32_Leaning\F401RE_SPI_4_Sentence\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="F401RE_SPI_4_Sentence.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: F401RE_SPI_4_Sentence.elf
+ 
+arm-none-eabi-size   F401RE_SPI_4_Sentence.elf 
+arm-none-eabi-objdump -h -S  F401RE_SPI_4_Sentence.elf  > "F401RE_SPI_4_Sentence.list"
+   text	   data	    bss	    dec	    hex	filename
+  13504	     24	   1808	  15336	   3be8	F401RE_SPI_4_Sentence.elf
+Finished building: default.size.stdout
+ 
+Finished building: F401RE_SPI_4_Sentence.list
+ 
+
+16:43:46 Build Finished. 0 errors, 0 warnings. (took 509ms)
+

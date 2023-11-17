@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;F401RE_SPI_3_16bit/Core/Src/gfghj.c&apos;" deleteContents="false" description="Delete resource &apos;F401RE_SPI_3_16bit/Core/Src/gfghj.c&apos;" element1="/F401RE_SPI_3_16bit/Core/Src/gfghj.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1699607829289"/>&#x0A;<refactoring comment="Delete resource &apos;F401RE_SPI_3_16bit/Core/Inc/gjugj.h&apos;" deleteContents="false" description="Delete resource &apos;F401RE_SPI_3_16bit/Core/Inc/gjugj.h&apos;" element1="/F401RE_SPI_3_16bit/Core/Inc/gjugj.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1699607831681"/>
+</session>
