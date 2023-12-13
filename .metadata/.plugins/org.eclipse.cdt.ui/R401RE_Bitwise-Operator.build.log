@@ -1,4 +1,4 @@
-17:05:15 **** Incremental Build of configuration Debug for project R401RE_Bitwise-Operator ****
+14:33:01 **** Incremental Build of configuration Debug for project R401RE_Bitwise-Operator ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/Led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Led.d" -MT"Core/Src/Led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Led.o"
 arm-none-eabi-gcc -o "R401RE_Bitwise-Operator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\user\STM32CubeIDE\STM32_Leaning\R401RE_Bitwise-Operator\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="R401RE_Bitwise-Operator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,11 +7,11 @@ Finished building target: R401RE_Bitwise-Operator.elf
 arm-none-eabi-size   R401RE_Bitwise-Operator.elf 
 arm-none-eabi-objdump -h -S  R401RE_Bitwise-Operator.elf  > "R401RE_Bitwise-Operator.list"
    text	   data	    bss	    dec	    hex	filename
-   6212	     20	   1572	   7804	   1e7c	R401RE_Bitwise-Operator.elf
+   6056	     20	   1572	   7648	   1de0	R401RE_Bitwise-Operator.elf
 Finished building: default.size.stdout
  
 Finished building: R401RE_Bitwise-Operator.list
  
 
-17:05:15 Build Finished. 0 errors, 0 warnings. (took 492ms)
+14:33:01 Build Finished. 0 errors, 0 warnings. (took 540ms)
 
